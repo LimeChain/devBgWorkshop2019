@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<br><br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <label>
+        Tokens Count: {{tokensCount}}
+      </label>
+      <br>
+      <button (click)="getTokensCount()">Get Token Count</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <label>
+        TokenID:
+        <input type="text" [(ngModel)]="tokenId">
+      </label><br>
+      <button (click)="getTokenColor()">Get Token Color</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-2 col-xs-offset-5 text-center token-shower" [ngStyle]="{'background-color': 'rgb(' + tokenData.r + ',' + tokenData.g + ',' + tokenData.b +')'}">
+      My awesome color is: <br>
+      {{ tokenData.r }} : {{ tokenData.g }} : {{ tokenData.b }}
+    </div>
+  </div>
+</div>
